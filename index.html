@@ -154,13 +154,21 @@
         </div>
     </section>
 
-    <!-- 配達について -->
+    <!-- 配達・発送について -->
     <section class="section section-delivery">
         <div class="container">
-            <h2 class="section-title">配達について</h2>
-            <div class="delivery-content">
-                <div class="delivery-main">
-                    <div class="delivery-icon">
+            <h2 class="section-title">配達・発送について</h2>
+
+            <!-- 初回送料無料バナー -->
+            <div class="delivery-free-banner">
+                <span class="free-banner-icon">🎁</span>
+                <p class="free-banner-text">初回のご注文は<strong>送料無料</strong>でお届けします！</p>
+            </div>
+
+            <div class="delivery-options">
+                <!-- 大輔配達 -->
+                <div class="delivery-option-card">
+                    <div class="delivery-option-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5">
                             <rect x="1" y="3" width="15" height="13" rx="2"></rect>
@@ -169,16 +177,54 @@
                             <circle cx="18.5" cy="18.5" r="2.5"></circle>
                         </svg>
                     </div>
-                    <h3>生産者が直接お届けします</h3>
-                    <p class="delivery-name">配達人：坂井大輔（生産者本人）</p>
-                </div>
-                <div class="delivery-benefit">
-                    <p>
-                        お米は、かなりの重さです。<br>
-                        特に30kgともなれば、持ち運びは大変です。<br><br>
-                        ご自宅まで生産者本人がお届けしますので、<br>
-                        重いお米を持って帰る必要がありません。<br>
+                    <span class="delivery-option-badge">送料無料</span>
+                    <h3>大輔配達</h3>
+                    <p class="delivery-option-area">金沢市内</p>
+                    <p class="delivery-option-desc">
+                        生産者・坂井大輔が<br>
+                        ご自宅まで直接お届けします。<br><br>
+                        重いお米を持って帰る<br>
+                        必要がありません。
                     </p>
+                    <p class="delivery-option-person">配達人：坂井大輔（生産者本人）</p>
+                </div>
+
+                <!-- 全国発送 -->
+                <div class="delivery-option-card">
+                    <div class="delivery-option-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                            <path d="M16 7V5a4 4 0 00-8 0v2"></path>
+                            <path d="M12 12v3"></path>
+                        </svg>
+                    </div>
+                    <span class="delivery-option-badge badge-shipping">全国対応</span>
+                    <h3>全国発送</h3>
+                    <p class="delivery-option-area">日本全国へお届け</p>
+                    <table class="shipping-cost-table">
+                        <thead>
+                            <tr>
+                                <th>内容量</th>
+                                <th>送料（税込）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>30kg玄米精米品</td>
+                                <td class="shipping-price">¥1,540</td>
+                            </tr>
+                            <tr>
+                                <td>10kg</td>
+                                <td class="shipping-price">¥495</td>
+                            </tr>
+                            <tr>
+                                <td>5kg</td>
+                                <td class="shipping-price">¥440</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="shipping-note">※沖縄県・北海道・離島は別途送料がかかります。<br>ご相談ください。</p>
                 </div>
             </div>
         </div>
@@ -273,8 +319,12 @@
                         <td>無料（価格に含む）</td>
                     </tr>
                     <tr>
-                        <th>配達</th>
-                        <td>生産者本人が直接お届け</td>
+                        <th>金沢市内</th>
+                        <td>生産者が直接お届け（送料無料）</td>
+                    </tr>
+                    <tr>
+                        <th>全国発送</th>
+                        <td>送料別途（初回送料無料）</td>
                     </tr>
                 </table>
             </div>

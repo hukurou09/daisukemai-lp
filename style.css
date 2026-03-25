@@ -455,20 +455,66 @@ body {
     background-color: var(--color-bg);
 }
 
-.delivery-content {
-    max-width: 680px;
+/* 初回送料無料バナー */
+.delivery-free-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #FFF8E7 0%, #FFF3D6 100%);
+    border: 2px solid #E8C76A;
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin-bottom: 40px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.free-banner-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.free-banner-text {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: #6B5320;
+    letter-spacing: 0.05em;
+}
+
+.free-banner-text strong {
+    color: #B8860B;
+    font-size: 1.125rem;
+}
+
+/* 配達オプション 2カラム */
+.delivery-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.delivery-main {
+.delivery-option-card {
+    background: var(--color-bg-alt);
+    padding: 40px 28px 32px;
+    border-radius: 12px;
     text-align: center;
-    margin-bottom: 40px;
+    position: relative;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.delivery-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 24px;
+.delivery-option-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.delivery-option-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -476,44 +522,105 @@ body {
     border-radius: 50%;
 }
 
-.delivery-icon svg {
-    width: 36px;
-    height: 36px;
+.delivery-option-icon svg {
+    width: 32px;
+    height: 32px;
     color: var(--color-white);
 }
 
-.delivery-main h3 {
+.delivery-option-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 4px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.badge-shipping {
+    background: var(--color-accent);
+}
+
+.delivery-option-card h3 {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     font-weight: 500;
     color: var(--color-primary-dark);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     letter-spacing: 0.05em;
 }
 
-.delivery-name {
+.delivery-option-area {
     font-size: 0.9375rem;
     color: var(--color-text-muted);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
 }
 
-.delivery-benefit {
-    background: var(--color-bg-alt);
-    padding: 32px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.delivery-benefit p {
+.delivery-option-desc {
     font-size: 0.9375rem;
     color: var(--color-text-light);
     line-height: 2;
+    margin-bottom: 20px;
 }
 
-.delivery-note {
+.delivery-option-person {
     font-size: 0.8125rem;
-    display: block;
-    margin-top: 8px;
     color: var(--color-text-muted);
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border-light);
+}
+
+/* 送料テーブル */
+.shipping-cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 16px;
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.shipping-cost-table thead tr {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.shipping-cost-table th,
+.shipping-cost-table td {
+    padding: 10px 14px;
+    font-size: 0.875rem;
+}
+
+.shipping-cost-table th {
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.shipping-cost-table tbody tr {
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.shipping-cost-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.shipping-price {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    text-align: right;
+}
+
+.shipping-note {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    text-align: center;
 }
 
 /* ========================================
@@ -867,8 +974,26 @@ body {
     }
 
     /* Delivery */
-    .delivery-benefit {
-        padding: 24px;
+    .delivery-options {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .delivery-option-card {
+        padding: 32px 20px 24px;
+    }
+
+    .delivery-free-banner {
+        padding: 12px 16px;
+        margin-bottom: 28px;
+    }
+
+    .free-banner-text {
+        font-size: 0.875rem;
+    }
+
+    .free-banner-text strong {
+        font-size: 1rem;
     }
 
     /* Summary */
